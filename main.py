@@ -19,9 +19,9 @@ def search_in_files(folder_path, search_string):
                             values = res.strip().split(",")
                             document = {
                                 "id": values[0].strip('"'),
-                                "phone_number": values[3].strip('"'),
-                                "name": values[6].strip('"'),
-                                "facebook_url": values[9].strip('"'),
+                                "phone_number": values[1].strip('"'),
+                                "name": values[2].strip('"'),
+                                "facebook_url": values[4].strip('"'),
                             }
                             isFound = True
                             return jsonify({"data":document})
