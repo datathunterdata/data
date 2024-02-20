@@ -9,7 +9,7 @@ def search_in_files(folder_path, search_string):
     isFound = False
     for root,dirs,files in os.walk(folder_path):
         for file in files:
-            if file.endswith(".txt"):
+            if file.endswith(".csv"):
                 file_path = os.path.join(root, file)
                 with open(file_path, "r", encoding="utf-8") as f:
                     mm = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
